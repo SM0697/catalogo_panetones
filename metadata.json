@@ -1,0 +1,6 @@
+{
+  "name": "Catálogo de Panetones Artesanales",
+  "description": "Catálogo comercial interactivo de panetones artesanales, veganos y saludables con carrito y pedidos por WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
