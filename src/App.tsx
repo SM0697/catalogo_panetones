@@ -78,6 +78,7 @@ export default function App() {
   // Formulario del cliente en carrito
   const [customerName, setCustomerName] = useState("");
   const [customerAddress, setCustomerAddress] = useState("");
+  const [customerNumber, setCustomerNumber] = useState("");
 
   // Notificación Toast
   const [toastMsg, setToastMsg] = useState<string | null>(null);
@@ -710,25 +711,40 @@ export default function App() {
                   <div className="border-t border-dashed border-slate-200 pt-3 space-y-2.5">
                     <div>
                       <label className="block text-[11px] font-bold text-slate-500 mb-1">
-                        Tu Nombre Completo (Opcional):
+                        Tu Nombre Completo:
                       </label>
                       <input
                         type="text"
                         value={customerName}
                         onChange={(e) => setCustomerName(e.target.value)}
                         placeholder="Ej. Carlos Mendoza"
+                        required
                         className="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 text-xs text-slate-800 focus:outline-none focus:border-emerald-600"
                       />
                     </div>
                     <div>
                       <label className="block text-[11px] font-bold text-slate-500 mb-1">
-                        Distrito o Dirección de Entrega (Opcional):
+                        Distrito o Dirección de Entrega:
                       </label>
                       <input
                         type="text"
                         value={customerAddress}
                         onChange={(e) => setCustomerAddress(e.target.value)}
+                        required
                         placeholder="Ej. Miraflores, Lima"
+                        className="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 text-xs text-slate-800 focus:outline-none focus:border-emerald-600"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[11px] font-bold text-slate-500 mb-1">
+                        Telefono:
+                      </label>
+                      <input
+                        type="text"
+                        value={customerNumber}
+                        onChange={(e) => setCustomerNumber(e.target.value)}
+                        required
+                        placeholder="Ej.999999999"
                         className="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 text-xs text-slate-800 focus:outline-none focus:border-emerald-600"
                       />
                     </div>
